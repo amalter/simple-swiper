@@ -5,8 +5,9 @@
 	"version": "0.1.0",
 	"title": "Simple Swiper",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "slides",
+	"description": "Simple Carousel block built with Swiper.js",
+	"keywords": ["carousel", "Slider"],
 	"example": {},
 	"supports": {
 		"html": false
