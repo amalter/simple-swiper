@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -20,11 +20,8 @@ export default function save() {
 		<div {...useBlockProps.save()}>
 			<div class="swiper">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">Slide 1</div>
-					<div class="swiper-slide">Slide 2</div>
-					<div class="swiper-slide">Slide 3</div>
+					<InnerBlocks.Content />
 				</div>
-
 				<div class="swiper-pagination"></div>
 
 				<div class="swiper-button-prev"></div>

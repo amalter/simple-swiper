@@ -20,32 +20,26 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-metadata/#view-script
  */
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, A11y, Keyboard } from "swiper/modules";
 
 /* eslint-disable no-console */
 
 /* eslint-enable no-console */
 const swiper = new Swiper(".swiper", {
-	modules: [Navigation, Pagination],
+	modules: [Navigation, Pagination, A11y, Keyboard],
 	// Optional parameters
-	direction: "vertical",
-	// loop: true,
-
-	// If we need pagination
+	loop: true,
 	pagination: {
 		el: ".swiper-pagination",
+		clickable: true,
 	},
-
-	// Navigation arrows
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
-
-	// And if we need scrollbar
-	// scrollbar: {
-	// 	el: ".swiper-scrollbar",
-	// },
+	autoHeight: true,
+	mousewheel: true,
+	keyboard: {
+		enabled: true,
+	},
 });
-
-console.log(swiper);
